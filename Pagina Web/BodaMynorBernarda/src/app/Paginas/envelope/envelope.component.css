@@ -1,0 +1,38 @@
+.envelope-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    cursor: pointer;
+  }
+  
+  .envelope {
+    width: 200px;
+    animation: zoomInOut 3s infinite;
+  }
+  
+  .envelope-open {
+    width: 200px;
+    animation: openAnimation 1s forwards; /* Define la animación aquí */
+  }
+  
+  @keyframes zoomInOut {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes openAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

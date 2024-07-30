@@ -1,0 +1,6 @@
+<div class="envelope-container" (click)="openEnvelope()">
+    <img *ngIf="!isOpen" src="../../../assets/sobre1.gif" class="envelope" />
+    <img *ngIf="isOpen" src="../../../assets/sobre2.gif" class="envelope-open" (animationend)="navigateToHome()" />
+    <div></div>
+  </div>
+
