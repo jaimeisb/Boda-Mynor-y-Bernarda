@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    flex-shrink: 0; /* Evita que el navbar cambie de tamaño */
+  }
+  
+  .content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem; /* Agrega padding si es necesario */
+  }
+  
+
+
+@media (max-width: 768px) {
+    .lista {
+        /* --bs-nav-link-padding-x: 0; */
+        --bs-nav-link-padding-y: 0.5rem;
+        --bs-nav-link-font-weight: ;
+        --bs-nav-link-color: var(--bs-navbar-color);
+        --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
+        --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+  }
+
+/* Contenedor para la imagen de separador */
+.separator-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Estilo para la imagen de separador */
+  .separator-image {
+    width: 102%;
+    max-width: 102%;
+    height: auto;
+    margin-top: 25px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+  }
+
+/* imagen portada inicial */
+  .responsive-image {
+    width: 100%; /* Ajusta el tamaño de la imagen para que sea 100% del contenedor por defecto */
+    max-width: 300px; /* Ajusta este valor para escritorio */
+  }
+  .responsive-image-carrusel{
+    width: 100%; /* Ajusta el tamaño de la imagen para que sea 100% del contenedor por defecto */
+    max-width: 300px; /* Ajusta este valor para escritorio */
+    min-width: 300px;
+  }
+  /* Estilos específicos para vista de escritorio */
+  @media (min-width: 769px) {
+    .responsive-image {
+      max-width: 450px; /* Ajusta este valor para escritorio */
+    }
+  }
+  
+  /* Estilos específicos para vista móvil */
+  @media (max-width: 768px) {
+    .responsive-image {
+      max-width: 300px; /* Ajusta este valor para móvil */
+    }
+  }
+
+  /* Clase para la sección de pantalla completa */
+.full-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 88vh; /* Altura mínima igual a la altura de la ventana del navegador */
+    max-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .full-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Altura mínima igual a la altura de la ventana del navegador */
+        max-height: 100vh;
+        padding: 20px;
+        text-align: center;
+      }
+  }
+

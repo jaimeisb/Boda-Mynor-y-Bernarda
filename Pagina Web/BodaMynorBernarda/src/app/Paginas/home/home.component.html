@@ -1,4 +1,237 @@
-<div class="home-container">
-    <!-- Contenido de tu página principal -->
-    holaaa
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 mb-3 sticky-top">
+  <span class="navbar-brand">Mynor y Bernarda</span>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="lista nav ms-auto nav-pills" [ngbScrollSpyMenu]="s">
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-1">Inicio</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-2">Second</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-3">Evento</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-4">Pareja</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-5">Obsequios</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-6">Vestimenta</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-7">Asistencia</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" ngbScrollSpyItem="basic-8">Programa</button>
+      </li>
+    </ul>
   </div>
+</nav>
+
+<div class="content-container" style="height: 88vh">
+  <div ngbScrollSpy #s="ngbScrollSpy" rootMargin="0px 0px -40%" class="content">
+    <div class="section full-screen">
+      <div class="row text-center">
+        <h1 ngbScrollSpyFragment="basic-1">NUESTRA BODA</h1>
+      </div>
+      <div class="row justify-content-center">
+        <img src="../../../assets/portada_inicio.png" class="responsive-image">
+      </div>
+      <div class="row text-center">
+        <h2> Solo faltan:</h2>
+        <h2>{{ days }} Días, {{ hours }} horas y {{ minutes }} minutos</h2>
+      </div>
+      
+    </div>
+    <div class="separator-container">
+      <img src="../../../assets/separador.png" class="separator-image">
+    </div>
+    <h4 ngbScrollSpyFragment="basic-2"></h4>
+    <div class="row justify-content-center">
+      <div class="card" style="width: 20rem;">
+        
+        <div class="card-body">
+          
+          <p class="card-text text-center">
+            Amar no es mirarse el uno al otro;
+            <br>
+            es mirar juntos, en la misma dirección
+           
+          </p>
+          <p class="card-text text-center">Con la gracia de Dios y
+
+            la bendición de nuestras familias
+            
+            uniremos nuestras vidas 
+            
+            en matrimonio y tenemos 
+            
+            el honor de invitarte
+            
+             a ser parte de esta celebración
+           
+          </p>
+          <h5 class="card-title text-center">¡Nos Casamos!</h5>
+          <br>
+          <h5 class="card-title text-center">14 | Diciembre | 2024</h5>
+        </div>
+      </div>
+    </div>
+    <div class="separator-container">
+      <img src="../../../assets/separador.png" class="separator-image">
+    </div> 
+    
+   
+
+    <h4 ngbScrollSpyFragment="basic-3"></h4>
+    <div class="row justify-content-center">
+      <div class="card" style="width: 20rem;">
+        <h5 class="card-title text-center">CEREMONIA Y RECEPCIÓN</h5>
+        <img src="../../../assets/iglesia.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-center">
+            15:00 PM
+            <br>
+            Parroquia la gran madre de Dios
+           
+          </p>
+          <p class="card-text text-center">
+            Fray Servando Teresa de Mier 970,
+            Col. Cabezas, Veracruz
+            <br>
+            <a class="popup-gmaps" href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7721.988350648977!2d-90.5215745!3d14.5994076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a308d3625b47%3A0xd933a51782068347!2sTerraEsperanza!5e0!3m2!1ses-419!2sgt!4v1703665996559!5m2!1ses-419!2sgt">Google Maps</a>
+                                        / <a class="popup-gmaps" href="https://ul.waze.com/ul?ll=14.42545700%2C-90.55298600&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">Waze</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="separator-container">
+      <img src="../../../assets/separador.png" class="separator-image">
+    </div> 
+    <h4 ngbScrollSpyFragment="basic-4"></h4>
+    <div class="row justify-content-center">
+      @if (images) {
+        <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+          @for (image of images; track image) {
+            <ng-template ngbSlide>
+              <div class="row justify-content-center picsum-img-wrapper">
+                <img [src]="image" alt="Random slide" class="responsive-image-carrusel"/>
+              </div>
+              <!-- <div class="carousel-caption">
+                <h3>No mouse navigation</h3>
+                <p>This carousel hides navigation arrows and indicators.</p>
+              </div> -->
+            </ng-template>
+          }
+        </ngb-carousel>
+      }
+    </div>
+    <h4 ngbScrollSpyFragment="basic-5"></h4>
+    <div class="row justify-content-center">
+      <div class="card" style="width: 20rem; ">
+        <h5 class="card-title text-center">Obsequios</h5>
+        <div class="row justify-content-center">
+          <img src="../../../assets/regalo.png"  style="width: 100px; background-color: blue;">
+        </div>
+        
+        <div class="card-body">
+          <p class="card-text text-center">
+            Tu presencia es nuestro mejor regalo, pero si deseas obsequiarnos un detalle puedes optar por cualquiera de estas opciones:
+            <br>
+            <a class="popup-gmaps" href="https://www.cemaco.com/list/bodacampanerosmontufar">Boda cemaco</a>
+            <br>
+            Obsequio a tu elección 
+            <br><br><h6 class="card-title text-center">!Todo es bienvenido!</h6>
+          </p>
+          <h5 class="card-title text-center">Gracias por ser parte de nuestro día especial</h5>
+        </div>
+      </div>
+    </div>
+    <div class="separator-container">
+      <img src="../../../assets/separador.png" class="separator-image">
+    </div> 
+
+    <h4 ngbScrollSpyFragment="basic-6"></h4>
+    <div class="row justify-content-center">
+      <div class="card" style="width: 20rem; ">
+        <h5 class="card-title text-center">Código de vestimenta</h5>
+        <div class="row justify-content-center">
+          <img src="../../../assets/vestimenta.png"  style="width: 250px; ">
+        </div>
+        
+        <div class="card-body">
+          <h5 class="card-title text-center">FORMAL</h5>
+          <p class="card-text text-center">
+            Recuerda que el color blanco es exclusivo para la novia 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="separator-container">
+      <img src="../../../assets/separador.png" class="separator-image">
+    </div> 
+
+    <h4 ngbScrollSpyFragment="basic-7"></h4>
+    <div class="row justify-content-center">
+      <div class="card" style="width: 20rem; ">
+        <h5 class="card-title text-center">Confirma tu asistencia</h5>
+        <div class="row justify-content-center">
+          <img src="../../../assets/asistencia.png"  style="width: 250px; ">
+        </div>
+        
+        <div class="card-body">
+          
+          <p class="card-text text-center">
+            Será un placer contar con tu presencia, confirma tu asistencia aquí.
+          </p>
+          <div class="row text-center">
+            <div class="col">
+              <button type="button" class="btn btn-opreutline-primary">Novia</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-outline-success">Novio</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator-container">
+      <img src="../../../assets/separador.png" class="separator-image">
+    </div> 
+
+    <h4 ngbScrollSpyFragment="basic-8"></h4>
+    <div class="row justify-content-center">
+      <div class="card" style="width: 20rem; ">
+        <h5 class="card-title text-center">Programa</h5>
+        <div class="row justify-content-center">
+          <img src="../../../assets/asistencia.png"  style="width: 250px; ">
+        </div>
+        
+        <div class="card-body">
+          
+          <p class="card-text text-center">
+            Será un placer contar con tu presencia, confirma tu asistencia aquí.
+          </p>
+          <div class="row text-center">
+            <div class="col">
+              <button type="button" class="btn btn-opreutline-primary">Novia</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-outline-success">Novio</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator-container">
+      <img src="../../../assets/separador.png" class="separator-image">
+    </div> 
+  </div>
+</div>
