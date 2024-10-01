@@ -51,13 +51,14 @@ html, body {
   
   /* Estilo para la imagen de separador */
   .separator-image {
-    width: 102%;
-    max-width: 102%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
     height: auto;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     margin-right: 0;
     margin-left: 0;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     padding: 0;
     display: block;
     box-sizing: border-box;
@@ -97,6 +98,7 @@ html, body {
     max-height: 100vh;
     padding: 20px;
     text-align: center;
+    word-wrap: break-word;
   }
 
   @media (max-width: 768px) {
@@ -112,3 +114,93 @@ html, body {
       }
   }
 
+  .large-number {
+    font-size: 5em; /* Ajusta el tamaño de la fuente según tus necesidades */
+    /* font-weight: bold; Si quieres que el número sea negrita */
+  }
+
+  .centered-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+  }
+  .custom-connector .e-timeline-item.e-connector::after {
+    border-color: #2a68e6;
+    border-width: 1.4px;
+    
+}
+
+.dot-color .e-dot {
+    /* background: #152146 ; */
+    /* outline: 1px dashed #152146; */
+    border-color: #152146;
+}
+.card-title{
+    font-family: "Parisienne";
+    font-weight: 600;
+    font-style: normal;
+    font-size: xxx-large;
+
+}
+
+
+.card-body{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.25vw;
+}
+
+.alex-brush-regular {
+    font-family: "Alex Brush", inherit;
+    font-weight: 400;
+    font-style: normal;
+    color: #B38B5A;
+    font-size: 3vw;
+}
+
+.section2{
+    background-image:url('../../../assets/fondo4.png') ; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card{
+    border-color: #96c7fa;
+    border-width: 14px; color: #326e92;
+}
+.contenedor-carta{
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .contenedor-carta {
+      max-width: 100%; /* Ajusta este valor para móvil */
+    }
+  }
+
+  @media (min-width: 769px) {
+    .contenedor-carta {
+      max-width: 30%; /* Ajusta este valor para escritorio */
+    }
+  }
+
+  .nunito {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+  }
+
+  .playfair-display{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4vw;
+  }

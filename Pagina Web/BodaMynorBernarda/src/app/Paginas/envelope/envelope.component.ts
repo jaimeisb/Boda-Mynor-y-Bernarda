@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-envelope',
@@ -11,8 +11,16 @@ import { Router } from '@angular/router';
 })
 export class EnvelopeComponent {
   isOpen = false;
-
-  constructor(private router: Router) {}
+  id:any;
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    console.log(this.activatedRoute.queryParams);
+    this.activatedRoute.queryParams.subscribe(params => {
+      if(params != undefined){
+        this.id = params['id'];
+        console.log(this.id); // Print the parameter to the console. 
+      }
+    });
+  }
 
   openEnvelope() {
     this.isOpen = true;
@@ -26,7 +34,10 @@ export class EnvelopeComponent {
   }
 
   navigateToHome() {
-    this.router.navigate(['/home']);
+    if(this.id != undefined)
+      this.router.navigate(['/home',this.id]);
+    else
+      this.router.navigate(['/home']);
   }
 
 }

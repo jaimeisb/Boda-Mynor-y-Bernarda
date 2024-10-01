@@ -1,237 +1,305 @@
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 mb-3 sticky-top">
-  <span class="navbar-brand">Mynor y Bernarda</span>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="lista nav ms-auto nav-pills" [ngbScrollSpyMenu]="s">
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-1">Inicio</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-2">Second</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-3">Evento</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-4">Pareja</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-5">Obsequios</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-6">Vestimenta</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-7">Asistencia</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" ngbScrollSpyItem="basic-8">Programa</button>
-      </li>
-    </ul>
+<div class="section full-screen">
+  <div class="row text-center">
+    <!-- <h1 ngbScrollSpyFragment="basic-1">NUESTRA BODA</h1> -->
+    <h1 >NUESTRA BODA</h1>
   </div>
-</nav>
+  <div class="row justify-content-center">
+    <img src="../../../assets/portada_inicio.png" class="responsive-image">
+  </div>
+  <div class="row text-center">
+    <h2> Solo faltan:</h2>
+    <h2>{{ days }} Días, {{ hours }} horas y {{ minutes }} minutos</h2>
+  </div>
+</div>
 
-<div class="content-container" style="height: 88vh">
-  <div ngbScrollSpy #s="ngbScrollSpy" rootMargin="0px 0px -40%" class="content">
-    <div class="section full-screen">
-      <div class="row text-center">
-        <h1 ngbScrollSpyFragment="basic-1">NUESTRA BODA</h1>
-      </div>
-      <div class="row justify-content-center">
-        <img src="../../../assets/portada_inicio.png" class="responsive-image">
-      </div>
-      <div class="row text-center">
-        <h2> Solo faltan:</h2>
-        <h2>{{ days }} Días, {{ hours }} horas y {{ minutes }} minutos</h2>
-      </div>
-      
-    </div>
-    <div class="separator-container">
-      <img src="../../../assets/separador.png" class="separator-image">
-    </div>
-    <h4 ngbScrollSpyFragment="basic-2"></h4>
-    <div class="row justify-content-center">
-      <div class="card" style="width: 20rem;">
-        
-        <div class="card-body">
-          
-          <p class="card-text text-center">
-            Amar no es mirarse el uno al otro;
-            <br>
-            es mirar juntos, en la misma dirección
-           
-          </p>
-          <p class="card-text text-center">Con la gracia de Dios y
+<div class="separator-container">
+  <img src="../../../assets/separador.png" class="separator-image">
+</div>
 
-            la bendición de nuestras familias
-            
-            uniremos nuestras vidas 
-            
-            en matrimonio y tenemos 
-            
-            el honor de invitarte
-            
-             a ser parte de esta celebración
-           
-          </p>
-          <h5 class="card-title text-center">¡Nos Casamos!</h5>
+<div class="section2 full-screen" >
+  <div class="row justify-content-center contenedor-carta" >
+    <div class="card full-screen" style="width: 100%; background-color: #eff6ff; ">
+      <div class="card-body">
+        <p class="card-text text-center" style="text-align: justify; color: black;">
+          Amar no es mirarse el uno al otro;
           <br>
-          <h5 class="card-title text-center">14 | Diciembre | 2024</h5>
+          es mirar juntos, en la misma dirección...
+        </p>
+        <p class="card-text text-center " style="text-align: justify; color: black;">
+          <i>"Por tanto, dejará el hombre a su padre y a su madre, y se unirá a su mujer, y serán una sola carne."</i>
+          <br>
+          
+        </p>
+        <p class="card-text text-center " style="color: black; font-weight: 900;">
+          <b>Génesis 2:24</b>
+        </p>
+        <p class="card-text text-center" style="text-align: justify; color: black;">
+          Con la gracia de Dios y la bendición de nuestras familias uniremos nuestras vidas en matrimonio y tenemos el honor de invitarte a compartir con nosotros nuestro día especial 
+        </p>
+        <h5 class="card-title text-center alex-brush-regular">¡Nos Casamos!</h5>
+        <!-- <br> -->
+        <!-- <div class="row card-text text-center" style="display: flex; justify-content: center; align-items: center; ">
+          <h5 class="nunito"> Sabádo &#8226; <span class="large-number playfair-display">14</span> &#8226; Diciembre</h5>
+        </div> -->
+        <div class="row card-text text-center " style="display: flex;
+        align-items: baseline; border-bottom:2px solid gold">
+          <div class="col" >
+            <h5 class="nunito"> Sabádo </h5>
+          </div>
+          <div class="col">
+            <h5 class="nunito"> <span class="playfair-display"> 14</span> </h5>
+          </div>
+          <div class="col">
+            <h5 class="nunito"> Diciembre</h5>
+          </div>
         </div>
       </div>
     </div>
-    <div class="separator-container">
-      <img src="../../../assets/separador.png" class="separator-image">
-    </div> 
-    
-   
+  </div>
+</div>
 
-    <h4 ngbScrollSpyFragment="basic-3"></h4>
-    <div class="row justify-content-center">
-      <div class="card" style="width: 20rem;">
-        <h5 class="card-title text-center">CEREMONIA Y RECEPCIÓN</h5>
-        <img src="../../../assets/iglesia.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text text-center">
-            15:00 PM
-            <br>
-            Parroquia la gran madre de Dios
+<div class="separator-container">
+  <img src="../../../assets/separador.png" class="separator-image">
+</div>
+
+<div class="section full-screen">
+  <div class="row justify-content-center contenedor-carta" >
+    <div class="card full-screen" style="width: 100%; background-color: #eff6ff; ">
+      <h2 class="card-title text-center"> Ceremonia y Recepción</h2>
+      <img src="../../../assets/iglesia.jpeg" class="card-img-top text-center" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="card-body">
+        <p class="card-text text-center" style="color: black;">
+          15:00 PM
+          <br>
+          Parroquia la gran madre de Dios
+          <br>
+          Fray Servando Teresa de Mier 970,
+          Col. Cabezas, Veracruz
+          <br>
+        </p>
+        <div class="row">
+          <div class="col">
+            <a class="btn btn-outline-primary popup-gmaps" href="https://waze.com/ul/h9fxd56j66">
+                Waze 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+              </svg>
+            </a>
+          </div>
+          <!-- <div class="col">
+            <a class="popup-gmaps" href="https://waze.com/ul/h9fxd56j66">Google Maps</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="separator-container">
+  <img src="../../../assets/separador.png" class="separator-image">
+</div>
+
+<div class="section2 full-screen" >
+  <div class="row justify-content-center " >
+    @if (images) {
+      <ngb-carousel  [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+        @for (image of images; track image) {
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper " >
+              <img [src]="image" alt="Random slide" style="height: 90%; width: 65%;" />
+            </div>
            
-          </p>
-          <p class="card-text text-center">
-            Fray Servando Teresa de Mier 970,
-            Col. Cabezas, Veracruz
-            <br>
-            <a class="popup-gmaps" href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7721.988350648977!2d-90.5215745!3d14.5994076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a308d3625b47%3A0xd933a51782068347!2sTerraEsperanza!5e0!3m2!1ses-419!2sgt!4v1703665996559!5m2!1ses-419!2sgt">Google Maps</a>
-                                        / <a class="popup-gmaps" href="https://ul.waze.com/ul?ll=14.42545700%2C-90.55298600&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">Waze</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="separator-container">
-      <img src="../../../assets/separador.png" class="separator-image">
-    </div> 
-    <h4 ngbScrollSpyFragment="basic-4"></h4>
-    <div class="row justify-content-center">
-      @if (images) {
-        <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
-          @for (image of images; track image) {
-            <ng-template ngbSlide>
-              <div class="row justify-content-center picsum-img-wrapper">
-                <img [src]="image" alt="Random slide" class="responsive-image-carrusel"/>
-              </div>
-              <!-- <div class="carousel-caption">
-                <h3>No mouse navigation</h3>
-                <p>This carousel hides navigation arrows and indicators.</p>
-              </div> -->
-            </ng-template>
-          }
-        </ngb-carousel>
-      }
-    </div>
-    <h4 ngbScrollSpyFragment="basic-5"></h4>
-    <div class="row justify-content-center">
-      <div class="card" style="width: 20rem; ">
-        <h5 class="card-title text-center">Obsequios</h5>
+          </ng-template>
+        }
+      </ngb-carousel>
+      <!-- <ngb-carousel>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random second slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[2]" alt="Random third slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </ng-template>
+      </ngb-carousel> -->
+    }
+  </div>
+</div>
+
+<div class="separator-container">
+  <img src="../../../assets/separador.png" class="separator-image">
+</div>
+
+<div class="section full-screen">
+  <div class="row justify-content-center contenedor-carta" >
+    <div class="card full-screen" style="width: 100%; background-color: #eff6ff; ">
+      <h2 class="card-title text-center"> Obsequios </h2>
         <div class="row justify-content-center">
-          <img src="../../../assets/regalo.png"  style="width: 100px; background-color: blue;">
+          <img src="../../../assets/regalo.png"  style="width: 100px;">
         </div>
         
         <div class="card-body">
-          <p class="card-text text-center">
+          <p class="card-text " style="text-align: justify; color:black">
             Tu presencia es nuestro mejor regalo, pero si deseas obsequiarnos un detalle puedes optar por cualquiera de estas opciones:
-            <br>
-            <a class="popup-gmaps" href="https://www.cemaco.com/list/bodacampanerosmontufar">Boda cemaco</a>
-            <br>
-            Obsequio a tu elección 
-            <br><br><h6 class="card-title text-center">!Todo es bienvenido!</h6>
           </p>
-          <h5 class="card-title text-center">Gracias por ser parte de nuestro día especial</h5>
-        </div>
-      </div>
-    </div>
-    <div class="separator-container">
-      <img src="../../../assets/separador.png" class="separator-image">
-    </div> 
-
-    <h4 ngbScrollSpyFragment="basic-6"></h4>
-    <div class="row justify-content-center">
-      <div class="card" style="width: 20rem; ">
-        <h5 class="card-title text-center">Código de vestimenta</h5>
-        <div class="row justify-content-center">
-          <img src="../../../assets/vestimenta.png"  style="width: 250px; ">
-        </div>
-        
-        <div class="card-body">
-          <h5 class="card-title text-center">FORMAL</h5>
-          <p class="card-text text-center">
-            Recuerda que el color blanco es exclusivo para la novia 
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="separator-container">
-      <img src="../../../assets/separador.png" class="separator-image">
-    </div> 
-
-    <h4 ngbScrollSpyFragment="basic-7"></h4>
-    <div class="row justify-content-center">
-      <div class="card" style="width: 20rem; ">
-        <h5 class="card-title text-center">Confirma tu asistencia</h5>
-        <div class="row justify-content-center">
-          <img src="../../../assets/asistencia.png"  style="width: 250px; ">
-        </div>
-        
-        <div class="card-body">
+          <div class="text-start nunito" style="text-indent: 2em; "> &#8226; <a class="popup-gmaps" href="https://www.cemaco.com/list/bodacampanerosmontufar">Boda cemaco</a></div>
           
-          <p class="card-text text-center">
-            Será un placer contar con tu presencia, confirma tu asistencia aquí.
-          </p>
-          <div class="row text-center">
-            <div class="col">
-              <button type="button" class="btn btn-opreutline-primary">Novia</button>
+          <div class="text-start nunito" style="text-indent: 2em;"> &#8226; Obsequio a tu elección</div> 
+          <br>
+          <h2 class=" text-center alex-brush-regular">!Todo es bienvenido!</h2>
+          <br>
+          <h4 class="Nunito text-center"><p>
+            <b>Gracias por ser parte de nuestro día especial </b>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            </svg>
+          </p></h4>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="separator-container">
+  <img src="../../../assets/separador.png" class="separator-image">
+</div>
+
+<div class="section2 full-screen">
+  <div class="row justify-content-center contenedor-carta" >
+    <div class="card full-screen" style="width: 100%; background-color: #eff6ff; ">
+      <h2 class="card-title text-center">Código de vestimenta</h2>
+      <div class="row justify-content-center">
+        <img src="../../../assets/vestimenta.png" style="width: 250px;">
+      </div>
+      <div class="card-body" style="color: black;">
+        <h5 class=" text-center alex-brush-regular">FORMAL</h5>
+        <p class="card-text text-center">
+          Recuerda que el color blanco es exclusivo para la novia.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="separator-container">
+  <img src="../../../assets/separador.png" class="separator-image">
+</div>
+
+<ng-container *ngIf="invitacion">
+  <div class="section full-screen">
+    <div class="row justify-content-center contenedor-carta" >
+      <div class="card full-screen" style="width: 100%;  background-color: #f6f7ec; ">
+        <h2 class="card-title text-center"> {{textoConfirmacion}}</h2>
+
+        <ng-container *ngIf="invitacion.estado == 'C'">
+          <h2 class=" text-center alex-brush-regular">!Te esperamos en nuestra boda!</h2>
+        </ng-container>
+        <ng-container *ngIf="invitacion.estado != 'C'">
+          <div class="row" style="text-align: left;">
+            <div>
+              <label for="nombre">Invitado</label>
+              <select name="Invitado" class="form-control" id="nombre" enable="false">
+                  <option selected>{{invitacion.nombre}}</option>
+              </select>
             </div>
-            <div class="col">
-              <button type="button" class="btn btn-outline-success">Novio</button>
+            <div>
+                <label for="guest">Número de invitados adultos</label>
+                <select name="Adultos" class="form-control" id="guest">
+                  <option *ngFor="let n of [].constructor(invitacion.adultos); let i = index" [value]="i + 1" [selected]="i + 1 === invitacion.adultos">
+                    {{ ('0' + (i + 1)).slice(-2) }}  <!-- Muestra los números como 01, 02, etc. -->
+                  </option>
+                </select>
+            </div>
+            <ng-container *ngIf="(invitacion?.menores ?? 0) > 0">
+              <div>
+                  <label for="guestchild">Número de invitados niños</label>
+                  <select name="Menores" class="form-control" id="Menores">
+                    <option>00</option>
+                    <option *ngFor="let n of [].constructor(invitacion.menores); let i = index" [value]="i + 1" [selected]="i + 1 === invitacion.menores">
+                      {{ ('0' + (i + 1)).slice(-2) }}  <!-- Muestra los números como 01, 02, etc. -->
+                    </option>
+                  </select>
+              </div>
+            </ng-container>
+          </div>
+            
+          <div class="card-body" style="color: black;">
+              
+            <p class="card-text text-center">
+              Será un placer contar con tu presencia, confirma tu asistencia aquí.
+            </p>
+            <p class="card-text text-center">
+              Confirmar antes de: <b>{{invitacion.fechaExpiracion | date:'yyyy-MM-dd HH:mm'}}</b>
+            </p>
+            <div class="row text-center">
+              <!-- <div class="col">
+                <a class="btn btn-outline-primary popup-gmaps" href="intent://send/+50241701987#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end" >
+                  Confirmar
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                  </svg>
+                </a> 
+
+              </div>-->
+              <div class="col">
+                <button type="button" class="btn btn-outline-success" (click)="Confirmar()">
+                  Confirmar
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                    </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </ng-container>
       </div>
     </div>
-    <div class="separator-container">
-      <img src="../../../assets/separador.png" class="separator-image">
-    </div> 
+  </div>
+</ng-container>
 
-    <h4 ngbScrollSpyFragment="basic-8"></h4>
-    <div class="row justify-content-center">
-      <div class="card" style="width: 20rem; ">
-        <h5 class="card-title text-center">Programa</h5>
-        <div class="row justify-content-center">
-          <img src="../../../assets/asistencia.png"  style="width: 250px; ">
-        </div>
-        
-        <div class="card-body">
-          
-          <p class="card-text text-center">
-            Será un placer contar con tu presencia, confirma tu asistencia aquí.
-          </p>
-          <div class="row text-center">
-            <div class="col">
-              <button type="button" class="btn btn-opreutline-primary">Novia</button>
-            </div>
-            <div class="col">
-              <button type="button" class="btn btn-outline-success">Novio</button>
-            </div>
-          </div>
+<div class="separator-container">
+  <img src="../../../assets/separador.png" class="separator-image">
+</div>
+
+<div class="section2 full-screen" >
+  <div class="row justify-content-center contenedor-carta" >
+    <div class="card full-screen" style="width: 100%; background-color: #eff6ff; ">
+      <h2 class="card-title text-center">Programa</h2>
+      <div class="card-body">
+        <div class="container" style="height: 330px;margin-top: 30px;">
+          <ejs-timeline cssClass="custom-connector dot-color" orientation="Vertical" style="color: #152146;">
+              <e-items>
+                
+                @for (item of tripItenerary; track item) {
+                 
+                  <e-item  [content]="item.content" [oppositeContent]="item.oppositeContent" [dotCss]="item.dotCss"> </e-item>
+                }
+                  
+              </e-items>
+          </ejs-timeline>
         </div>
       </div>
     </div>
-    <div class="separator-container">
-      <img src="../../../assets/separador.png" class="separator-image">
-    </div> 
+    
   </div>
 </div>
