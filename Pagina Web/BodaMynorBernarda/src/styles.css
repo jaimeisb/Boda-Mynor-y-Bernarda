@@ -2,3 +2,17 @@
 
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+:root{
+    --color-1: #002E5A;
+    --color-2: #AEDCEB;
+    --color-3: #E1F2F9;
+    --color-4: #818B94;
+    --color-5: #E3E6E5;
+    --fuente-1: 'Style Script', cursive;
+    --fuente-2: 'Poppins', sans-serif;
+    --grosor-fuente-light: 300;
+    --grosor-fuente-medium: 500;
+    --grosor-fuente-bold: 700;
+    /* font-family: 'Parisienne', cursive; */
+    /* font-family: 'Style Script', cursive; */
+}

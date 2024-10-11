@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, ElementRef } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { NgbCarouselConfig, NgbCarouselModule, NgbDropdownModule, NgbScrollSpyModule } from '@ng-bootstrap/ng-bootstrap';
 import { TimelineAllModule, TimelineItemModel, TimelineModule } from '@syncfusion/ej2-angular-layouts';
@@ -6,7 +6,6 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { ConexionService, Invitacion } from '../../Servicios/conexion.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
   selector: 'app-home',
@@ -26,29 +25,106 @@ export class HomeComponent implements OnInit, OnDestroy {
   public minutes:any;
   public seconds:any;
 
+  showModal = true;
+
   textoConfirmacion = 'Confirma tu asistencia';
-  images = ["../../../assets/Fotos/Pareja1.jpg"
-            ,"../../../assets/Fotos/Pareja2.jpg"
-            ,"../../../assets/Fotos/Pareja3.jpg"
-            ,"../../../assets/Fotos/Pareja4.jpg"
-            ,"../../../assets/Fotos/Pareja5.jpg"
-            ,"../../../assets/Fotos/Pareja6.jpg"
-            ,"../../../assets/Fotos/Pareja7.jpg"
-            ,"../../../assets/Fotos/Pareja8.jpg"
-          ]
+  images = [
+    {
+      src: "../../../assets/Fotos/Pareja1.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja1.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    {
+      src: "../../../assets/Fotos/Pareja2.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja2-movil.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    {
+      src: "../../../assets/Fotos/Pareja3.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja3-movil.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    {
+      src: "../../../assets/Fotos/Pareja4.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja4-movil.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    {
+      src: "../../../assets/Fotos/Pareja5.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja5-movil.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    {
+      src: "../../../assets/Fotos/Pareja6.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja6.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    {
+      src: "../../../assets/Fotos/Pareja7.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja7-movil.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    {
+      src: "../../../assets/Fotos/Pareja8.jpg",
+      fitType: "cover", // Definir el tipo de ajuste para esta imagen
+      mobileSrc: "../../../assets/Fotos/Pareja8.jpg", // Versión para móvil
+      fitTypeMobile: "cover",
+    },
+    
+  ];
+          
   showNavigationArrows = true;
 	showNavigationIndicators = true;
 
-  public tripItenerary: TimelineItemModel[] = [
-    { content: `Day 1, 4:00 PM`, oppositeContent: 'Check-in and campsite visit', dotCss: 'e-icons e-check' },
-    { content: 'Day 1, 7:00 PM', oppositeContent: 'Dinner with music', dotCss: 'e-icons e-check'  },
-    { content: 'Day 2, 5:30 AM', oppositeContent: 'Sunrise between mountains', dotCss: 'e-icons e-check'  },
-    { content: 'Day 2, 8:00 AM', oppositeContent: 'Breakfast and check-out', dotCss: 'e-icons e-check'  },
+  public tripItenerary = [
+    { 
+      content: `<b>15:00 PM</b> <br> Ceremonia civil`, 
+      oppositeContent: `IMG`, 
+      dotCss: ' custom-image',
+      imagen:'../../../assets/civil.png'
+    },
+    { 
+      content: `IMG`, 
+      oppositeContent: `<b>15:30 PM</b> <br> Ceremonia religiosa`, 
+      dotCss: 'custom-image' ,
+      imagen:'../../../assets/religiosa.png'
+    },
+    { 
+      content: `<b>16:30 PM</b> <br> Recepción`, 
+      oppositeContent: `IMG`, 
+      dotCss: 'custom-image' ,
+      imagen:'../../../assets/recepcionBoda.png'
+    },
+    { 
+      content: `IMG`, 
+      oppositeContent: `<b>17:00 PM</b> <br> Sesión de fotos`, 
+      dotCss: 'custom-image' ,
+      imagen:'../../../assets/foto.png'
+    },
+    { 
+      content: `<b>17:30 PM</b> <br> Banquete`, 
+      oppositeContent: `IMG`, 
+      dotCss: 'custom-image' ,
+      imagen:'../../../assets/comida.png'
+    },
+    { 
+      content: `IMG`, 
+      oppositeContent: `<b>19:00 PM</b> <br> Momento especial`, 
+      dotCss: 'custom-image' ,
+      imagen:'../../../assets/momento.png'
+    },
   ];
 
   id:any;
-  invitacion:Invitacion | undefined;
-  constructor(config: NgbCarouselConfig, private activatedRoute: ActivatedRoute, private servicio: ConexionService) {
+  public invitacion:Invitacion | undefined;
+  constructor(config: NgbCarouselConfig, private activatedRoute: ActivatedRoute, private servicio: ConexionService, private el: ElementRef) {
 		// customize default values of carousels used by this component tree
 		config.showNavigationArrows = true;
 		config.showNavigationIndicators = true;
@@ -64,10 +140,26 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
       
 	}
+  isMobile: boolean = false;
   
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768;
+  }
 
   ngOnInit() {
+    this.checkScreenSize();
     this.subscription = interval(1000).subscribe(() => this.updateCountdown());
+    const modalElement = this.el.nativeElement.querySelector('#exampleModal');
+    console.log(modalElement);
+    if (modalElement) {
+      const modal = new (window as any).bootstrap.Modal(modalElement);
+      modal.show();
+    }
   }
 
   ngOnDestroy() {
@@ -99,6 +191,11 @@ export class HomeComponent implements OnInit, OnDestroy {
         // Manejar la respuesta y mostrar un mensaje de éxito
         console.log('Invitación confirmada:', respuesta);
         this.textoConfirmacion = 'Invitación confirmada!.';
+        if(this.invitacion)
+        {
+          console.log('Cambio de estado')
+          this.invitacion.estado = 'C';
+        }
       },
       error: (err) => {
         // Manejar errores y mostrar un mensaje de error

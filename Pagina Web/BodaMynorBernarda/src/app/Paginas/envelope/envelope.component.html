@@ -1,6 +1,36 @@
-<div class="envelope-container" (click)="openEnvelope()">
-    <img *ngIf="!isOpen" src="../../../assets/sobre1.gif" class="envelope" />
-    <img *ngIf="isOpen" src="../../../assets/sobre2.gif" class="envelope-open" (animationend)="navigateToHome()" />
-    <div></div>
-  </div>
 
+<div class="envelope-container" >
+    
+  <p >
+    Bienvenidos a la boda de Mynor & Bernarnda
+  </p>
+  <!-- <img *ngIf="!isOpen" src="../../../assets/sobre1.gif" class="envelope" />
+    <img *ngIf="isOpen" src="../../../assets/sobre2.gif" class="envelope-open" (animationend)="navigateToHome()" />
+    <div></div> -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <p class="texto p-3">Bienvenidos a la invitación de Mynor & Bernarnda</p>
+  
+        <a class="boton" aria-label="Close" id="" href="" data-bs-dismiss="modal">Ingresar</a>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>

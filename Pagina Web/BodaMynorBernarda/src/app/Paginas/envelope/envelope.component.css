@@ -36,3 +36,46 @@
     }
   }
   
+  .modal-body{
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    background-color: #4A6360 ; /*rgba(129, 148, 139, .5); */
+   
+  }
+
+  .modal-content{
+    border: none;
+  }
+
+
+  .modal{
+     background-color:#4A6360 ; /*rgba(129, 148, 139, .5); */
+     opacity: .9;
+  }
+
+  .boton:hover {
+    background: #81948B;
+    text-decoration: none;
+}
+
+.boton {
+  background: #BFA880;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  border-radius: 50px;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 13px 30px;
+}
+.texto{
+  font-size: 55px;
+    line-height: 50px;
+    font-family: "Open Sans", sans-serif;
+    color: #FAF7F3;
+    display: inline-block;
+    width: 100%;
+}
