@@ -18,37 +18,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+  
 </head>
 <!-- <body style="background-image: url('../src/assets/fondo.png');"> -->
 <body style="background-color: rgb(225,242,249)"></body>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script type="text/javascript">
-    $('.filtering').slick({
-      slidesToShow: 4,
-      slidesToScroll: 4
-    });
 
-    var filtered = false;
-
-    $('.your-class').on('click', function(){
-      if (filtered === false) {
-        $('.filtering').slick('slickFilter',':even');
-        $(this).text('Unfilter Slides');
-        filtered = true;
-      } else {
-        $('.filtering').slick('slickUnfilter');
-        $(this).text('Filter Slides');
-        filtered = false;
-      }
-    });
-
-  </script>
 
   <app-root></app-root>
  

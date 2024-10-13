@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, ElementRef, AfterViewInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { NgbCarouselConfig, NgbCarouselModule, NgbDropdownModule, NgbScrollSpyModule } from '@ng-bootstrap/ng-bootstrap';
 import { TimelineAllModule, TimelineItemModel, TimelineModule } from '@syncfusion/ej2-angular-layouts';
@@ -6,6 +6,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { ConexionService, Invitacion } from '../../Servicios/conexion.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { Fancybox } from "@fancyapps/ui";
+
+declare var $: any;
 
 @Component({
   selector: 'app-home',
@@ -15,7 +18,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css',
   providers: [ConexionService],
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   private subscription!: Subscription;
   public dateNow = new Date();
   public targetDate = new Date('2024-12-14T15:00:00');
@@ -124,7 +127,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   id:any;
   public invitacion:Invitacion | undefined;
-  constructor(config: NgbCarouselConfig, private activatedRoute: ActivatedRoute, private servicio: ConexionService, private el: ElementRef) {
+  constructor(config: NgbCarouselConfig, private activatedRoute: ActivatedRoute, private servicio: ConexionService, private el: ElementRef, private elRef: ElementRef) {
 		// customize default values of carousels used by this component tree
 		config.showNavigationArrows = true;
 		config.showNavigationIndicators = true;
@@ -142,6 +145,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
   isMobile: boolean = false;
   
+  items = [
+    { name: 'Item 1', category: 'category1' },
+    { name: 'Item 2', category: 'category2' },
+    { name: 'Item 3', category: 'category1' },
+    { name: 'Item 4', category: 'category2' },
+    { name: 'Item 5', category: 'category1' },
+  ];
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkScreenSize();
@@ -149,6 +160,53 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   checkScreenSize() {
     this.isMobile = window.innerWidth <= 768;
+  }
+
+  ngAfterViewInit() {
+    // Inicializa el carrusel una vez que el DOM esté listo
+  
+    $('.carrusel').slick({
+      lazyLoad: 'ondemand',
+      autoplay: true,
+      autoplaySpeed: 2000,
+      centerMode: true,
+      dots: true,
+      centerPadding: '20px',
+      slidesToShow: 3,
+      prevArrow: false,
+      nextArrow: false,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  
+
+  }
+
+  filter(category: string) {
+    // if (category === 'all') {
+    //   $('.slick-carousel').slick('slickUnfilter');
+    // } else {
+    //   $('.slick-carousel').slick('slickFilter', function() {
+    //     return $(this).find('h3').text().includes(category);
+    //   });
+    // }
   }
 
   ngOnInit() {
@@ -160,12 +218,17 @@ export class HomeComponent implements OnInit, OnDestroy {
       const modal = new (window as any).bootstrap.Modal(modalElement);
       modal.show();
     }
+    Fancybox.bind(this.elRef.nativeElement, '[data-fancybox]', {
+      // Custom options
+    });
   }
 
   ngOnDestroy() {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
+    Fancybox.unbind(this.elRef.nativeElement);
+    Fancybox.close();
   }
 
   private updateCountdown() {

@@ -25,12 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/slick/slick.css",
-              "node_modules/slick/slick-theme.css",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [  "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/slick-carousel/slick/slick.min.js"]
           },
           "configurations": {
             "production": {
