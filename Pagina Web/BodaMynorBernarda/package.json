@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "gh-pages -d build -r https://github.com/jaimeisb/Boda-Mynor-y-Bernarda.git"
   },
   "private": true,
   "dependencies": {
