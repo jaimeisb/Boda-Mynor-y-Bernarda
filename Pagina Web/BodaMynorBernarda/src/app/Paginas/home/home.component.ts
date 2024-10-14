@@ -33,51 +33,51 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   textoConfirmacion = 'Confirma tu asistencia';
   images = [
     {
-      src: "../../../assets/Fotos/Pareja1.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja1.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja1.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja1.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     {
-      src: "../../../assets/Fotos/Pareja2.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja2.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja2-movil.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja2-movil.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     {
-      src: "../../../assets/Fotos/Pareja3.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja3.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja3-movil.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja3-movil.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     {
-      src: "../../../assets/Fotos/Pareja4.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja4.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja4-movil.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja4-movil.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     {
-      src: "../../../assets/Fotos/Pareja5.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja5.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja5-movil.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja5-movil.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     {
-      src: "../../../assets/Fotos/Pareja6.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja6.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja6.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja6.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     {
-      src: "../../../assets/Fotos/Pareja7.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja7.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja7-movil.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja7-movil.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     {
-      src: "../../../assets/Fotos/Pareja8.jpg",
+      src: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja8.jpg",
       fitType: "cover", // Definir el tipo de ajuste para esta imagen
-      mobileSrc: "../../../assets/Fotos/Pareja8.jpg", // Versión para móvil
+      mobileSrc: "/Boda-Mynor-y-Bernarda/assets/Fotos/Pareja8.jpg", // Versión para móvil
       fitTypeMobile: "cover",
     },
     
@@ -91,37 +91,37 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       content: `<b>15:00 PM</b> <br> Ceremonia civil`, 
       oppositeContent: `IMG`, 
       dotCss: ' custom-image',
-      imagen:'../../../assets/civil.png'
+      imagen:'/Boda-Mynor-y-Bernarda/assets/civil.png'
     },
     { 
       content: `IMG`, 
       oppositeContent: `<b>15:30 PM</b> <br> Ceremonia religiosa`, 
       dotCss: 'custom-image' ,
-      imagen:'../../../assets/religiosa.png'
+      imagen:'/Boda-Mynor-y-Bernarda/assets/religiosa.png'
     },
     { 
       content: `<b>16:30 PM</b> <br> Recepción`, 
       oppositeContent: `IMG`, 
       dotCss: 'custom-image' ,
-      imagen:'../../../assets/recepcionBoda.png'
+      imagen:'/Boda-Mynor-y-Bernarda/assets/recepcionBoda.png'
     },
     { 
       content: `IMG`, 
       oppositeContent: `<b>17:00 PM</b> <br> Sesión de fotos`, 
       dotCss: 'custom-image' ,
-      imagen:'../../../assets/foto.png'
+      imagen:'/Boda-Mynor-y-Bernarda/assets/foto.png'
     },
     { 
       content: `<b>17:30 PM</b> <br> Banquete`, 
       oppositeContent: `IMG`, 
       dotCss: 'custom-image' ,
-      imagen:'../../../assets/comida.png'
+      imagen:'/Boda-Mynor-y-Bernarda/assets/comida.png'
     },
     { 
       content: `IMG`, 
       oppositeContent: `<b>19:00 PM</b> <br> Momento especial`, 
       dotCss: 'custom-image' ,
-      imagen:'../../../assets/momento.png'
+      imagen:'/Boda-Mynor-y-Bernarda/assets/momento.png'
     },
   ];
 
