@@ -184,8 +184,8 @@
     <div class="row contenido">
       <h2 class="titulo2"> Ceremonia y Recepción</h2>
       <img src="/Boda-Mynor-y-Bernarda/assets/iglesia.jpeg" class="card-img-top text-center" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
-      <p class="texto2">
-        Hora 3:00 PM  Jardín de nalu
+      <p class="textoDireccion p-4">
+        Hora 3:00 PM  Jardín de Nalu
        
         <br>
          Km 32.5 circunvalación del lago de Amatitlán, Amatitlán, Guatemala
@@ -214,7 +214,7 @@
   <div class="container">
     <div class="row text-center d-flex justify-content-center align-items-center">
       <div class="content-galeria">
-        <h2 class="titulo2">Nuesta historia</h2>
+        <h2 class="titulo2">Retratos de Nuestro Amor</h2>
         <p class="texto2">Un minuto, un segundo, un instante que queda en la eternidad</p>
       </div>
     </div>
@@ -294,7 +294,8 @@
         <div class=" texto2 " ><a class="popup-gmaps  boton2" href="https://www.cemaco.com/list/bodamynorbecky20241214">Boda cemaco</a></div>
         <br>
         <!-- <div class="text-start texto2 sangria" >  <a class="popup-gmaps boton2" href="https://www.cemaco.com/list/bodamynorbecky20241214">Boda cemaco</a></div> -->
-       <div class=" texto2  p-3" >   Obsequio a tu elección</div>
+        <div class=" textoDireccion  pt-3" > u </div>
+        <div class=" textoDireccion negrita" > Obsequio a tu elección</div>
           <!-- <a href="#" class="boton addeventatc" id="addeventatc1" title="" aria-haspopup="true" aria-expanded="false" tabindex="0" translate="no" data-loaded="true" style="visibility: visible;">
 
             <span class="nameBtn atc_node notranslate">Agendar</span>
@@ -374,6 +375,7 @@
             <div>
                 <label class="texto2" for="guest">Número de invitados adultos</label>
                 <select class="texto2" name="Adultos" class="form-control" id="guest">
+                  <option>00</option>
                   <option *ngFor="let n of [].constructor(invitacion.adultos); let i = index" [value]="i + 1" [selected]="i + 1 === invitacion.adultos">
                     {{ ('0' + (i + 1)).slice(-2) }}  <!-- Muestra los números como 01, 02, etc. -->
                   </option>

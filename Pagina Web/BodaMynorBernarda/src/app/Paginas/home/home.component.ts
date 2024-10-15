@@ -132,7 +132,10 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 		config.showNavigationArrows = true;
 		config.showNavigationIndicators = true;
     
-    this.activatedRoute.params.subscribe((params: Params) => this.id = params['id']);
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+      this.id = params['id']; // Aquí se asigna el ID del query param
+      console.log('ID:', this.id);
+    });
     console.log('home');
     console.log(this.id);
     this.servicio.getInvitacion(this.id).subscribe(
